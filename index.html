@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="icon" href="Assets/others/logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Nav Bar -->
+        <nav class="nav flex align-cen">
+            <div class="logo crc"><img class="invert" src="Assets/others/logo.svg" alt="Spotify">
+            </div>
+            <div class="right-group flex align-cen">
+                <div class="home-search flex align-cen">
+                    <div class="home bg-color crc"><a class="anone" href="index.html"><i
+                                class="fa-solid fa-house anone"></a></i>
+                    </div>
+
+                    <div class="search-bar crc flex align-cen bg-color">
+                        <i class="fas fa-search"></i>
+                        <input type="text" class="in-search txt-crc bg-color"
+                            placeholder="Warning! SearchBar doesn't work &#128513;" />
+                        <i class="fa-regular fa-folder-closed"></i>
+                    </div>
+                </div>
+
+                <div class="right-block flex align-cen">
+                    <div class="scl premium ">
+                        <button class="btn btn-pre crc">Explore Premium</button>
+                    </div>
+
+                    <div class="scl bell crc">
+                        <i class="fa-regular fa-bell">
+                        </i>
+                    </div>
+                    <!-- Gareeb hun! -->
+                    <div id="popup" class="popup flex just-cen align-cen" style="display: none;">
+                        <p>Habibi it seems, You are rich!!!</p>
+                        <img src="Assets/others/popup.webp" alt="Your network is too slow!!">
+                        <p>Help Me with some money</p>
+                    </div>
+                    <div class="profile-picture crc bg-color">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <!-- Main Content -->
+        <main class="flex">
+            <div class="menu-bar bg-color">
+                <div class="library-head flex align-cen">
+                    <div class="library_icon">
+                        <img src="Assets/others/library_icon.png">
+                        <span>Your Library</span>
+                    </div>
+
+                    <div class="head">
+                        <i class="fa-solid fa-plus scl"> </i> <!--plus-sign-->
+                        <i class="fa-solid fa-arrow-right gap-10 scl"> </i> <!--forward sign-->
+                    </div>
+                </div>
+            </div>
+            <div class="content bg-color">
+                <div class="content-nav">
+                    <div class="for-back">
+                        <img src="Assets/others/backward_icon.png" atl="backward">
+                        <img src="Assets/others/forward_icon.png" atl="forward">
+                    </div>
+                    <div>
+                        <button class="btn content-btn"><i class="fa-regular fa-circle-down"></i> Install App</button>
+                    </div>
+                </div>
+                <div class="content-body">
+                    <div class="section">
+                        <h2 class="sec-head">Recommended for you</h2>
+                        <div class="category">
+                            <div class="card crc">
+                                <img src="Assets/Album-cover/card8Img.jpeg">
+                                <p class="card-head">Top 50 - Global</p>
+                                <p class="card-info">Your daily update for most played track right...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <h2 class="sec-head">Trending</h2>
+                        <div class="category">
+                            <div class="card">
+                                <img src="Assets/Album-cover/card1Img.jpeg">
+                                <p class="card-head">Machayenge 4</p>
+                                <p class="card-info">Your daily update for most played track right...</p>
+                            </div>
+                            <div class="card crc">
+                                <img src="Assets/Album-cover/card2Img.jpeg">
+                                <p class="card-head">Suniya Suniya</p>
+                                <p class="card-info">Your daily update for most played track right...</p>
+                            </div>
+                            <div class="card crc">
+                                <img src="Assets/Album-cover/card3Img.jpeg">
+                                <p class="card-head">Akatsuki</p>
+                                <p class="card-info">Your daily update for most played track right...</p>
+                            </div>
+                            <div class="card crc">
+                                <img src="Assets/Album-cover/card4Img.jpeg">
+                                <p class="card-head">Fuck what they say</p>
+                                <p class="card-info">Your daily update for most played track right...</p>
+                            </div>
+                            <div class="card crc">
+                                <img src="Assets/Album-cover/card5Img.jpeg">
+                                <p class="card-head">Jo tum mere ho</p>
+                                <p class="card-info">Your daily update for most played track right...</p>
+                            </div>
+                            <div class="card crc">
+                                <img src="Assets/Album-cover/card1Img.jpeg">
+                                <p class="card-head">Top 50 - Global</p>
+                                <p class="card-info">Your daily update for most played track right...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!--Media Controllers   -->
+        <div class="media-control flex align-cen">
+            <!-- Album Info - right-side penal -->
+            <div class="song-details-container">
+                <div class="album-info flex align-cen just-cen">
+
+                    <img src="Assets/Album-cover/card8Img.jpeg" id="current-song-cover" alt="Ablum Cover">
+
+                    <div class="text">
+
+                        <h3 class="media-control-img" id="current-song-name">Unknown</h3>
+
+                        <p style="opacity: 70%" id="current-song-artists"><i>discription</i></p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- media controller - middle panel -->
+            <div class="controler">
+                <div class="control-img flex align-cen just-cen">
+
+                    <img src="Assets/media-controll-imgs/previous.svg" class="ctrl-icons crc prev" alt="previous">
+
+                    <img src="Assets/media-controll-imgs/play.svg" id="big" class="play_pause crc" alt="play/Pause">
+
+                    <img src="Assets/media-controll-imgs/next.svg" class="ctrl-icons next crc" alt="next">
+
+                </div>
+
+                <span id="current-time">00:00</span>
+
+                <div class="range-input inline">
+                    <input type="range" class="progressBar chrome-range crc" name=layers-range min="0" max="100"
+                        step=".0001" value="0">
+                </div>
+
+                <span id="duration">00:00</span>
+            </div>
+
+            <!-- Additional Controls -->
+            <div class="adv-option">
+            </div>
+        </div>
+    </div>
+    <script src="main.js">
+    </script>
+    <script src="popup.js">
+    </script>
+</body>
+
+</html>

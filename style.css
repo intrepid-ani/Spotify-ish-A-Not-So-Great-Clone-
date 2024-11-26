@@ -1,0 +1,466 @@
+/* General Reset and Box-Sizing */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background: #000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Container Styling */
+.container {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    color: whitesmoke;
+}
+
+/* Navigation Styling */
+nav {
+    height: 10vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+/* Logo Styling */
+.logo img {
+    margin-top: 5px;
+    width: 2.35em;
+    height: 2.35em;
+}
+
+/* Right Group of Navigation Items */
+.right-group {
+    width: 73%;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/* Home Search Bar */
+.home-search {
+    gap: 1rem;
+    width: 60%;
+}
+
+/* Home Button and Profile Picture Styling */
+.home,
+.profile-picture {
+    background-color: #121212;
+    height: 2.45rem;
+    width: 2.45rem;
+    border-radius: 50%;
+    font-size: 1.35rem;
+    transition: transform 0.3s, background-color 0.3s;
+    overflow: visible;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        transform: scale(1.06);
+        color: white;
+        background-color: #303030;
+    }
+}
+
+/* Search Bar Styling */
+.search-bar {
+    width: 70%;
+    max-width: 600px;
+    height: 2.45rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 2rem;
+    gap: 0.5rem;
+    border: 2px solid transparent;
+    transition: border 0.3s, background-color 0.3s;
+    overflow-x: hidden;
+}
+
+.search-bar:hover {
+    background-color: #303030;
+}
+
+.search-bar:focus-within {
+    border: 2px solid white;
+}
+
+/* Icon Styling in Search Bar */
+.search-bar i {
+    font-size: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    line-height: 1;
+}
+
+/* Input Field Styling */
+.in-search {
+    flex: 1 2 50px;
+    height: 100%;
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.in-search::placeholder {
+    color: rgba(212, 212, 212, 0.836);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.in-search::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.in-search:focus-within::after {
+    width: 100%;
+}
+
+/* Right Block Items */
+.right-block {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    height: 100%;
+}
+
+/* premium */
+.btn-pre {
+    font-size: .85rem;
+    padding: 5px;
+    transition: transform .3s, opacity .3s, border .3s;
+
+    &:hover {
+        transform: scale(1.09);
+        opacity: 0.85;
+        border: 1px solid rgb(20, 20, 20);
+    }
+}
+
+/* Bell */
+.bell i {
+    transition: transform .3s, opacity .3s, border .3s, padding .6s;
+    font-size: 1.45rem;
+
+    &:hover {
+        transform: scale(1.09);
+        opacity: 0.85;
+    }
+}
+
+/* Profile Picture Adjustments */
+.profile-picture {
+    font-size: 1rem;
+}
+
+/* >>>>>>>>>>>Main Styling<<<<<<<<<<<< */
+
+/* Setting top margin and border-radius for left and right section */
+
+.menu-bar,
+.content {
+    margin-top: 11vh;
+    border-radius: 1rem;
+    padding: 10px
+}
+
+.menu-bar {
+    height: 75vh;
+    width: 18rem;
+    margin-left: 0.75vw;
+}
+
+.library-head {
+    padding-top: 10px;
+    justify-content: space-between;
+    margin: 0 0.5rem;
+}
+
+.menu-bar img {
+    height: 1.5rem;
+    width: auto;
+    margin: auto 0.25rem;
+}
+
+.head i,
+span {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.head i {
+    font-weight: 600;
+}
+
+.menu-bar,
+.content {
+    margin-top: 11vh;
+    border-radius: 1rem;
+    padding: 10px
+}
+
+/* Content */
+.content {
+    padding-top: 0;
+    margin-left: 5px;
+    height: 75vh;
+    width: calc(98vw - 18rem);
+    overflow: auto;
+}
+
+.content-nav {
+    padding-top: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background-color: #121212;
+}
+
+.for-back img {
+    background-color: #262626;
+    padding: 0.25rem;
+    border-radius: 50%;
+    margin-right: 5px;
+    transition: transform .3s, background-color .3s;
+}
+
+.content-btn {
+    color: whitesmoke;
+    background-color: #262626;
+    font-size: .95rem;
+    transition: transform .3s, background-color .3s;
+}
+
+.for-back img:hover,
+.content-btn:hover {
+    transform: scale(1.09);
+    background-color: #121212;
+}
+
+/* Styling Category */
+.category {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: auto;
+
+}
+
+/* Category Title */
+.sec-head {
+    margin: .5rem .25rem;
+}
+
+
+/* A single Card-Styling */
+.card {
+    border-radius: 0.65rem;
+    width: 180px;
+    padding: 0.75rem;
+    margin-right: .65rem;
+    margin-bottom: 0.75rem;
+    transition: background-color .3s;
+}
+
+.card:hover {
+    background-color: #303030;
+    border-radius: 0.65rem;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.65rem;
+}
+
+.card-head {
+    font-weight: 600px;
+    font-size: 1rem;
+    opacity: 0.65;
+}
+
+.card-info {
+    font-size: 0.75rem;
+    opacity: 0.65;
+}
+
+/* Styling for the media controller*/
+
+.song-details-container{
+    width : 18rem;
+}
+
+.controller {
+    justify-content: space-between;
+}
+
+/* First part of controller */
+.album-info img {
+    width: 3rem;
+    margin: 0 10px;
+    border-radius: .5rem;
+}
+
+/* Middle part of the Media Controller */
+.media-control {
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.inline {
+    display: inline-flex;
+}
+
+#big {
+    width: 1.8rem;
+    height: auto;
+    margin: 0 .75rem;
+}
+
+.control-img img {
+    width: 2rem;
+    filter: grayscale(20);
+    margin: .25rem 0.5rem;
+}
+
+.ctrl-icons {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    transition: transfrom .5s, background-color .5s;
+
+    &:hover {
+        color: white;
+        background-color: #303030;
+        border-radius: .25rem;
+    }
+}
+
+.range-input {
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+.range-input .chrome-range {
+    width: 33rem;
+    height: 5px;
+}
+
+/* For Chrome and Brave */
+
+/* Remove default styling for Chrome and Brave */
+.chrome-range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 300px;
+    height: 8px;
+    background-color: #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+/* Change background color on hover */
+/* Style the thumb (slider button) */
+.chrome-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Remove default thumb styling */
+    width: 18px;
+    height: 18px;
+    margin-top: -7px;
+    background-color: rgb(121, 121, 121);
+    border-radius: 50%;
+    border: 2px solid #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Change thumb color on hover */
+.chrome-range::-webkit-slider-thumb:hover {
+    background-color: #388E3C;
+}
+
+/* Optional: Style the slider track */
+.chrome-range::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    background: rgb(145, 38, 38);
+    border-radius: 5px;
+}
+
+.chrome-range::-webkit-slider-runnable-track {
+    background: #444; /* Track background */
+    height: 5px;
+}
+@media (max-width: 768px) {
+    .inline {
+        display: block;
+        text-align: center;
+    }
+
+    #big {
+        width: 2.5rem;
+        margin: 0.5rem auto;
+    }
+
+    .control-img img {
+        width: 2rem;
+        margin: 0.5rem auto;
+    }
+
+    .ctrl-icons {
+        padding: 10px;
+    }
+
+    .range-input {
+        padding: 10px;
+        padding-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #big {
+        width: 3rem;
+    }
+
+    .control-img img {
+        width: 2.5rem;
+    }
+
+    .ctrl-icons {
+        padding: 15px;
+    }
+
+    .range-input {
+        padding: 15px;
+        padding-bottom: 20px;
+    }
+}

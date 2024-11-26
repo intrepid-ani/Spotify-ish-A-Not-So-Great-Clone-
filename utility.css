@@ -1,0 +1,111 @@
+.invert {
+    filter: invert();
+}
+
+.bg-color {
+    background-color: #121212;
+}
+
+.gap-10{
+    margin-left:10px;
+}
+
+
+/* =========scale=========== */
+.scl:hover{
+    transform: scale(1.09);
+} 
+
+/* ==========Button========== */
+.btn{
+    padding: 6px;
+    border-radius: 2rem;
+    font-weight: bold;
+    border:none;
+}
+
+/*========Nav utility========*/
+
+.nav-ele-size {
+    font-size: 2rem;
+}
+
+.white {
+    color: white;
+}
+
+.crc {
+    cursor: pointer;
+}
+
+.brd-rd {
+    border-radius: 1rem;
+}
+
+.txt-crc {
+    cursor: text;
+}
+
+input[type="text"] {
+    border: none;          
+    outline: none;         
+    background: none;      
+    padding: 5px;          
+    font-size: 16px;        
+    width: 200px;          
+}
+
+/*==========Display Properties==========*/
+
+.flex{
+    display: flex;
+}
+
+.align-cen{
+    align-items: center;
+}
+
+.just-cen{
+    justify-content: center;
+}
+
+
+.popup {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #242424;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    z-index: 800;
+}
+
+.popup img{
+    width: 6rem;
+    height: auto;
+}
+
+.anone{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/*========Temp style=========*/
+/* .brd {
+    border: 2px solid blue;
+}
+
+.brd-red{
+    border: 2px das red;
+}
+
+.brd-d{
+    border: 2px dotted green;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+} */
